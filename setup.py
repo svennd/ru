@@ -33,5 +33,9 @@ setup(
             "ru_unblock_all={}.unblock_all:main".format(PKG_NAME),
         ],
     },
-    install_requires=install_requires
+    install_requires=install_requires,
+    # https://setuptools.readthedocs.io/en/latest/setuptools.html#including-data-files
+    package_data={
+        "ru": ["static/*.json"],
+    },
 )
